@@ -38,7 +38,7 @@ describe('testing searchNeighbours', () => {
 describe('testing gameOfLife', () => {
     test('If arrayLife is [[1, 2],[2, 2],[3, 2]], result should be undefined', () => {
         const arrayLife = [
-            [1, 2],
+            [1,2],
             [2, 2],
             [3, 2],
         ];
@@ -68,7 +68,7 @@ describe('testing isLife', () => {
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
         ];
-        expect(isLive(array)).toStrictEqual([
+        expect(isLife(array)).toStrictEqual([
             [2, 1],
             [2, 2],
             [2, 3],
@@ -82,7 +82,7 @@ describe('testing isLife', () => {
             [0, 0, 1, 0, 0],
             [0, 0, 0, 0, 0],
         ];
-        expect(isLife(array)).toStrictEqual([
+        expect(isLife(array)).toBe([
             [1, 2],
             [2, 2],
             [3, 2],
