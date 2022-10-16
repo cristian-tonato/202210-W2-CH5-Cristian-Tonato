@@ -27,12 +27,6 @@ describe('testing searchNeighbours', () => {
     test('If ejeX = 3, ejeY = 2, result should be 3', () => {
         expect(searchNeighbours(3, 2)).toBe(3);
     });
-    test('If ejeX = 0, ejeY = 0, result should be 0', () => {
-        expect(searchNeighbours(0, 0)).toBe(0);
-    });
-    test('If ejeX = -1, ejeY = -1, result should be 0', () => {
-        expect(searchNeighbours(-1, -1)).toBe(0);
-    });
 });
 
 describe('testing gameOfLife', () => {
@@ -54,9 +48,6 @@ describe('testing newBorn', () => {
             [3, 3],
         ]);
     });
-    test('If ejeX = -1, ejeY = -1, result should be []', () => {
-        expect(newBorn(-1, -1)).toEqual([]);
-    });
 });
 
 describe('testing isLife', () => {
@@ -74,18 +65,5 @@ describe('testing isLife', () => {
             [2, 3],
         ]);
     });
-    test('If isLife is [[0, 0, 0, 0, 0],[0, 0, 1, 0, 0],[0, 0, 1, 0, 0],[0, 0, 1, 0, 0],[0, 0, 0, 0, 0],] array result should be [[1, 2],[2, 2],[3, 2]]', () => {
-        const array = [
-            [0, 0, 0, 0, 0],
-            [0, 0, 1, 0, 0],
-            [0, 0, 1, 0, 0],
-            [0, 0, 1, 0, 0],
-            [0, 0, 0, 0, 0],
-        ];
-        expect(isLife(array)).toBe([
-            [1, 2],
-            [2, 2],
-            [3, 2],
-        ]);
-    });
+
 });
